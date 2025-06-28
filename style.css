@@ -1,0 +1,103 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 2em;
+}
+button {
+    margin: 0.5em;
+    padding: 1em;
+    font-size: 16px;
+}
+#results {
+    margin-top: 2em;
+}
+.loader {
+    width: 48px;
+    height: 48px;
+    border: 5px solid #FFF;
+    border-bottom-color: #FF3D00;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+    }
+
+    @keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+    }
+.loaderWrapper {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 39;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(2px); /* Adds the blur effect */
+  background-color: rgba(255, 255, 255, 0.3); /* Optional: light transparent background */
+}
+
+.hidden{
+display:none;
+}
+.styled-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  font-family: Arial, sans-serif;
+}
+
+.styled-table th,
+.styled-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.styled-table th {
+  background-color: #f2f2f2;
+  text-align: left;
+  font-weight: bold;
+}
+
+.styled-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.styled-table tr:hover {
+  background-color: #f1f1f1;
+}
+.invoice-block {
+  max-width: 900px;
+  margin: auto;
+  padding: 1rem;
+}
+
+.invoice-block p {
+  margin: 4px 0;
+  font-size: 15px;
+}
+
+.invoice-block h2 {
+  margin-top: 1rem;
+}
+.table-wrapper {
+  display: flex;
+  justify-content: center; /* ✅ center horizontally */
+  width: 100%;
+  overflow-x: auto; /* ensures table doesn't overflow */
+}
+
+.styled-table {
+  width: auto; /* ✅ shrink to fit content */
+  min-width: 800px;
+  border-collapse: collapse;
+  margin: 0 auto; /* ✅ fallback center */
+  font-family: Arial, sans-serif;
+}
+

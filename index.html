@@ -1,0 +1,63 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Audio Text Summarizer Demo</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <div id="loader" class="loaderWrapper hidden">
+        <span class="loader"></span>
+    </div>
+
+    <h1>Invoice Reader</h1>
+
+    <button id="upload-btn">Upload Files</button>
+    
+     <input type="file" id="upload-input" accept=".png,.jpg,.jpeg" class="hidden" />
+
+    <div id="results">
+
+        <h2>Rendered Output</h2>
+        <p id="Extracted_text_table"></p>
+
+    </div>
+
+     <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Invoice Reader</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script> <!-- ✅ Add Marked.js -->
+</head>
+
+<body>
+    <div id="loader" class="loaderWrapper hidden">
+        <span class="loader"></span>
+    </div>
+
+    <h1>Invoice Reader</h1>
+
+    <button id="upload-btn">Upload Image</button>
+    <input type="file" id="upload-input" accept=".png,.jpg,.jpeg" class="hidden" />
+
+    <div id="results">
+        <h2>Extracted Markdown Output (Rendered)</h2>
+        <!-- <div id="Extracted_text_table" style="border: 1px solid #ccc; padding: 1rem;"></div> -->
+         <div id="Extracted_text_table"></div>
+
+         <!-- ✅ Use div instead of <pre> -->
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
